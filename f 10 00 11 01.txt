@@ -16,3 +16,14 @@ d 11 10 00 01
 0, 2, 3, 5
 
 q
+
+
+    # qc.append(gate,[2, 3, 4, 7, size-1])
+    #Alternative Goal Configurations
+    # qc.append(gate,[0, 3, 6, 7, 19])
+    # qc.append(gate,[0, 2, 3, 5, size-1])
+    #Grover in depth two cannot resolve this since two solutions out of four are marked.
+    # qc.append(gate,[0, 4, 5, 7, size-1])
+    # qc.append(gate,[3, 4, 6, 7, size-1])
+    # qc.append(gate,[3, 4, 5, 6, size-1])
+    # qc.append(gate,[0, 1, 3, 6, size-1])

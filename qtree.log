@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.10) (preloaded format=xelatex 2022.11.12)  24 MAR 2023 00:34
+This is XeTeX, Version 3.141592653-2.6-0.999994 (MiKTeX 22.10) (preloaded format=xelatex 2022.11.12)  4 APR 2023 22:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1279,17 +1279,18 @@ File: Posicion-inicial.png Graphic file (type bmp)
 [6]
 File: Posicion-final1.png Graphic file (type bmp)
 <Posicion-final1.png>
- [7]
+ [7] [8]
 File: qtree_files/qtree_9_0.png Graphic file (type bmp)
 <qtree_files/qtree_9_0.png>
- [8]
+
 Underfull \hbox (badness 10000) in paragraph at lines 805--806
 
  []
 
+[9]
 File: qtree_files/qtree_11_0.png Graphic file (type bmp)
 <qtree_files/qtree_11_0.png>
-[9]
+
 Underfull \hbox (badness 10000) in paragraph at lines 827--828
 
  []
@@ -1299,34 +1300,33 @@ File: Posicion-final2.png Graphic file (type bmp)
 [10] [11]
 File: qtree_files/qtree_13_0.png Graphic file (type bmp)
 <qtree_files/qtree_13_0.png>
-
+ [12]
 Underfull \hbox (badness 10000) in paragraph at lines 922--923
 
  []
 
-[12]
 File: qtree_files/qtree_14_0.png Graphic file (type bmp)
 <qtree_files/qtree_14_0.png>
-
+[13]
 Underfull \hbox (badness 10000) in paragraph at lines 940--941
 
  []
 
-[13] (qtree.aux)
+[14] [15] (qtree.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.475pt have occurred.
 
 Package rerunfilecheck Info: File `qtree.out' has not changed.
-(rerunfilecheck)             Checksum: 7590576F2F0F7F03896F4C36A55C3F75;677.
+(rerunfilecheck)             Checksum: 7599E9D41FEED64619E939CA2A4BA929;1060.
  ) 
 Here is how much of TeX's memory you used:
- 31159 strings out of 410527
- 600051 string characters out of 2812554
- 1157652 words of memory out of 3000000
- 51887 multiletter control sequences out of 15000+600000
+ 31160 strings out of 410527
+ 600076 string characters out of 2812554
+ 1156712 words of memory out of 3000000
+ 51888 multiletter control sequences out of 15000+600000
  477244 words of font info for 91 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  99i,7n,115p,556b,637s stack positions out of 10000i,1000n,20000p,200000b,80000s
 
-Output written on qtree.pdf (13 pages).
+Output written on qtree.pdf (15 pages).

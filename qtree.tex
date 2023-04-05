@@ -167,7 +167,7 @@
     % Document title
     \title{Árbol de búsqueda cuántico}
     \author{Alfredo Villegas}
-    \date{24 de marzo de 2023}
+    \date{4 de abril de 2023}
     
     
     
@@ -392,7 +392,7 @@
 
     
     \hypertarget{algoritmo-de-uxe1rbol-de-buxfasqueda-cuuxe1ntico}{%
-\section{Algoritmo de árbol de búsqueda
+\section*{Algoritmo de árbol de búsqueda
 cuántico}\label{algoritmo-de-uxe1rbol-de-buxfasqueda-cuuxe1ntico}}
 
 A continuación se presenta un ejemplo del algoritmo cuántico de arbol de
@@ -401,7 +401,7 @@ basamos en el trabajo de Andreas Wichert en \emph{Quantum Tree Search
 with Qiskit} \href{https://doi.org/10.3390/math10173103}{1}
 
     \hypertarget{rompecabezas-3-puzzle}{%
-\subsection{Rompecabezas 3-puzzle}\label{rompecabezas-3-puzzle}}
+\section{Rompecabezas 3-puzzle}\label{rompecabezas-3-puzzle}}
 
 El rompecabezas de 3 se compone de tres fichas móviles numeradas en un
 marco de 2x2. Una celda del marco está vacía, y debido a esto los
@@ -454,7 +454,7 @@ operador unitario \(T\) que actúa también en la configuración de 8 + 1
 qubits, esta vez el ket adicional \(\ket{c}\) es un qubit auxiliar.
 
     \hypertarget{definiciones}{%
-\paragraph{Definiciones}\label{definiciones}}
+\subsection{Definiciones}\label{definiciones}}
 
 El objeto 1 está representado por 00, 2 está representado por 01, 3 está
 representado por 10 y el espacio vacío x está representado por 11. se
@@ -506,7 +506,7 @@ modelo
 \end{tcolorbox}
 
     \hypertarget{reglas}{%
-\subparagraph{Reglas}\label{reglas}}
+\subsection{Reglas}\label{reglas}}
 
 En la tarea de 3 rompecabezas, tenemos cuatro \textbf{reglas} diferentes
 definidas por la posición del espacio vacío. Cada una de las reglas
@@ -529,7 +529,7 @@ espacio vacío y lo indica configurando un qubit de los cuatro qubits del
 \emph{rastro} a uno.
 
     \hypertarget{ejecuciuxf3n-de-las-reglas}{%
-\subparagraph{Ejecución de las
+\subsection{Ejecución de las
 Reglas}\label{ejecuciuxf3n-de-las-reglas}}
 
 La ejecución de las reglas usa la puerta de Fredkin, también llamada
@@ -679,7 +679,7 @@ como resultado el circuito cuántico indicado en la Figura.
 \end{tcolorbox}
         
     \hypertarget{profundidad-2}{%
-\subsection{Profundidad 2}\label{profundidad-2}}
+\section{3-puzzle de profundidad 2}\label{profundidad-2}}
 
 La amplificación de Grover no se puede aplicar a menos de cuatro
 estados. Una búsqueda de profundidad uno para el rompecabezas de 3 parte
@@ -828,7 +828,7 @@ decir mover la casilla en sentido horario dos veces.
     
 
     \hypertarget{profundidad-3}{%
-\subsection{Profundidad 3}\label{profundidad-3}}
+\section{3-puzzle de profundidad 3}\label{profundidad-3}}
 
 Este caso es similar a los anteriores aunque el Grover es diferente.
 
@@ -946,6 +946,55 @@ puede lograrse de tres formas diferentes, estas soluciones tienen como
 descriptor de camino los casos: 1-1-0, 1-0-1, 0-1-1, siendo 1 el
 movimiento en sentido horario y 0 antihorario, se puede analizar que las
 tres decisiones de camino conducen a la solución.
+
+    \hypertarget{anuxe1lisis-y-conclusiones}{%
+\section{Análisis y conclusiones}\label{anuxe1lisis-y-conclusiones}}
+
+Dado que los problemas de inteligencia artificial suelen describirse
+como problemas de búsqueda, juegos de lógica y puzzles, estudiar las
+aplicaciones de un algoritmo cuántico de búsqueda en juegos de lógica y
+la abstracción de dichos juegos al mundo cuántico nos permite acercarnos
+al desarrollo de la inteligencia artificial cuántica. En el presente
+trabajo se hizo la abstracción a un algoritmo cuántico de búsqueda del
+juego del puzzle de 3 celdas considerando un árbol de búsqueda de 3
+niveles de profundidad. Para este nivel de complejidad, el circuito
+cuántico consistió de 25 qubits, se puede ver que si se desea aumentar
+la profundidad, por cada nivel se deben añadir 5 qubits, 4 que sirven de
+rastro y 1 para el descriptor de ruta de ese nivel de profundidad. Para
+alcanzar cualquier solución, se necesitan de 6 a 7 niveles de
+profundidad, por lo que vienen a ser de 40 a 45 qubits.
+
+Al comparar este algoritmo cuántico con el algoritmo clásico, para este
+ejemplo a pesar de que teóricamente es más eficiente este algoritmo, no
+se puede determinar que el algoritmo cuántico pueda ser más rápido por
+el hecho de que el problema del puzzle de 3 celdas es relativamente
+sencillo incluso para un ordenador clásico y la diferencia de tiempos de
+ejecución entre ambos algoritmos cuántico y clásico es muy pequeña por
+hallar la solución en un tiempo muy corto. No obstante es una
+abstracción funcional del puzzle, como un algoritmo cuántico que
+resuelve un árbol de búsqueda y que a su vez es escalable, por lo tanto
+puede abstraerse a otro tipo de juegos y puzzles más complejos, lo cual
+bajo escenarios de mucha mayor complejidad computacional puede saberse
+que este algoritmo cuántico hallaría la solución de forma más rápida por
+usar el algoritmo de Grover, el cual conseguiría la solución en un
+tiempo \(O(\sqrt{N})\) gracias al principio de superposición.
+
+La superposición se utiliza aplicando la compuerta Hadamard en los
+qubits descriptores de ruta, por lo que estos consideran los dos caminos
+posibles en cada paso y permite describir al aplicar las reglas de
+movimiento, el oráculo y la operación Grover cuál es el camino en cada
+paso que conlleva un resultado igual al esperado, evaluando una
+superposición de todos los posibles escenarios del árbol de búsqueda al
+mismo tiempo. Es por ello que para problemas mucho más complejos la
+búsqueda sería mucho más eficiente.
+
+Por otro lado, es importante diferenciar un árbol de búsqueda de un
+árbol de decisión, el primero es similar a lo estudiado con el presente
+algoritmo, hallar un camino en un árbol que me permita alcanzar la
+solución, en este se desea obtener un camino. El segundo, el árbol de
+decisión, es un algoritmo que permite determinar con un árbol si un dato
+tiene o no una característica específica estudiando este arbol
+previamente generado con un conjunto de datos similares.
 
 
     % Add a bibliography block to the postdoc
